@@ -220,11 +220,7 @@ node src/RecipeCollection.js
 
 **File:** `src/fetch-helpers.js`
 
-Implement two async functions that fetch data from the DummyJSON Recipes API. These functions should have **no DOM interaction**.
-
-Each function returns `{ data, error }`:
-- On success: `{ data: <result>, error: null }`
-- On failure: `{ data: null, error: <error message string> }`
+Implement two async functions that fetch data from the DummyJSON Recipes API. Read below for more details on those functions. 
 
 ### API Reference
 
@@ -235,6 +231,12 @@ Each function returns `{ data, error }`:
 | `https://dummyjson.com/recipes/search?q=:query` | Search recipes (returns `{ recipes: [...] }`) |
 
 ### Functions
+
+These two functions should have **no DOM interaction**.
+
+Each function returns `{ data, error }`:
+- On success: `{ data: <result>, error: null }`
+- On failure: `{ data: null, error: <error message string> }`
 
 #### `getAllRecipes()`
 
