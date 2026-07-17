@@ -22,8 +22,26 @@
 // What you'll need: document.querySelector, element.innerHTML, element.textContent,
 // document.createElement, element.setAttribute, element.append, array iteration.
 export const renderRecipes = (recipes) => {
-  // TODO 1
+  const recipe = document.querySelector("#recipes")
 };
+
+function setupCounter(element) {
+  let counter = 0
+  const setCounter = (count) => {
+    counter = count
+    element.innerHTML = `count is ${counter}`
+  }
+  element.addEventListener('click', () => setCounter(counter + 1))
+  setCounter(0)
+
+  const movieTitleAndYear = clickedLi.querySelector('h3').textContent;
+
+  const newRecipe = document.createElement('h3');
+  console.log(newRecipe);
+}
+
+const container = document.querySelector('#container');
+container.append(newRecipe);
 
 // renderError(message) — shows an error message on the page when something
 // goes wrong, or hides it when the message is cleared.
@@ -34,5 +52,18 @@ export const renderRecipes = (recipes) => {
 // What you'll need: document.querySelector, element.textContent,
 // element.classList.add, element.classList.remove.
 export const renderError = (message) => {
-  // TODO 2
-};
+
+  export const renderRecipes = (recipes) => {
+    const recipe = document.querySelector("#error-message")
+  };
+  counter = count
+  element.innerHTML = `count is ${counter}`
+}
+element.addEventListener('click', () => setCounter(counter + 1))
+setCounter(0)
+
+const movieTitleAndYear = clickedLi.querySelector('h3').textContent;
+
+('h3').classList.add
+  ('h3').classlist.remove
+
