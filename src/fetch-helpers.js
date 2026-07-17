@@ -74,6 +74,5 @@ export const searchRecipes = async (query) => {
       });
   };
   console.log(searchRecipes);
-}
 };
 
