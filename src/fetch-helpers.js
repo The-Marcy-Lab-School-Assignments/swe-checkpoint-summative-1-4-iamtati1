@@ -19,7 +19,7 @@
 // On success, data should be an array of recipe objects.
 // On failure, data should be null and error should be a message string.
 export const getAllRecipes = async () => {
-  const response = await fetch(`https://dummyjson.com/recipes`);
+  const response = await fetch(`https://dummyjson.com/recipes?limit=30`);
   const data = await response.json();
   return data;
   const handleResolvedOrRejectedPromise = (promise) => {
@@ -40,7 +40,7 @@ export const getAllRecipes = async () => {
   // On success, data should be an array of matching recipe objects.
   // On failure, data should be null and error should be a message string.
   export const searchRecipes = async (query) => {
-    const response = await fetch(`https://dummyjson.com/recipes/${id}`);
+    const response = await fetch(`https://dummyjson.com/recipes/${id}`); // or :id
     const data = await response.json();
     return data;
     const handleResolvedOrRejectedPromise = (promise) => {
@@ -56,5 +56,24 @@ export const getAllRecipes = async () => {
     };
     console.log(searchRecipes);
   }
+};
+// Allows for searching recipes
+export const searchRecipes = async (query) => {
+  const response = await fetch(`https://dummyjson.com/recipes/search?q=:query`);
+  const data = await response.json();
+  return data;
+  const handleResolvedOrRejectedPromise = (promise) => {
+    return promise
+      .then((message) => {
+        console.log(message);
+        return message.toUpperCase();
+      })
+      .catch((error) => {
+        console.error(`There is an error ${error.message}`);
+        return null;
+      });
+  };
+  console.log(searchRecipes);
+}
 };
 
