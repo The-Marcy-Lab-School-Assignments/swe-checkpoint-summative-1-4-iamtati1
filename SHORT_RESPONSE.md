@@ -39,6 +39,9 @@ Explain what **encapsulation** means in object-oriented programming. What does t
  I like to think about it as classifying the common important data that holds important info with the class. ` Object-oriented programming` encapsulates data with functionality.
 
  We can name and create functions that allow us to manage tasks using encapsulation and OOP. Setting a class and applying methods allow us to view, reuse, and save lists, then add and print things in the list, which allows us to manage **properties**.
+
+ The `#` syntax in a javascript class makes objects that class private it, it holds values.
+
 ### Question 3: Flexbox vs. CSS Grid
 
 Explain the difference between **Flexbox** and **CSS Grid** and provide an example of a component of a website that would use each.
